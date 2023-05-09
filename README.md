@@ -112,4 +112,4 @@ This Liquid code snippet will generate a sorted list of unique categories for th
 
 This plugin assumes that you are using Jekyll's default permalink style. If you have a custom permalink style set in your `_config.yml`, make sure to update the `url_structure` setting accordingly in the `category_pages` configuration.
 
-And that's it! Your team should now be able to use the custom category plugin to generate dynamic category pages for different collections.
+And that's it! You should now be able to use the custom category plugin to generate dynamic category pages for different collections.
