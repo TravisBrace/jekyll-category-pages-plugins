@@ -56,7 +56,7 @@ Example for `_layouts/blogcategoryindex.html`:
 layout: default
 ---
 
-{% assign category = page.category %}
+{% assign category = page.title %}
 
 <h1>{{ category }} Blog Posts</h1>
 
