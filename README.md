@@ -60,16 +60,13 @@ layout: default
 
 <h1>{{ category }} Blog Posts</h1>
 
-{% for post in site.blogposts %}
-  {% assign post_categories = post.category | default: post.categories %}
-  {% if post_categories contains category %}
+{% for post in page.items %}
     <article>
       <h2>{{ post.title }}</h2>
       <p>{{ post.date | date: "%B %d, %Y" }}</p>
       <p>{{ post.excerpt | strip_html }}</p>
       <a href="{{ post.url }}">Read More</a>
     </article>
-  {% endif %}
 {% endfor %}
 ```
 
