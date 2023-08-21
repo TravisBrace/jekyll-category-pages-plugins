@@ -21,8 +21,11 @@ module Jekyll
         category_pages = {}
 
         collection.docs.each do |doc|
-          categories = Array(doc.data['category'] || doc.data['categories'])
-
+          categories = Array(doc.data['category'])
+          categories += Array(doc.data['categories'])
+          categories.uniq!
+          categories.compact!
+        
           categories.each do |category|
             category_slug = slugify(category)
             category_pages[category_slug] ||= CategoryPage.new(site, collection, category, url_template, layout)
